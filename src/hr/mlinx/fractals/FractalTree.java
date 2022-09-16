@@ -22,11 +22,11 @@ public abstract class FractalTree {
 						 pivot.getY() + dist * Math.sin(angle - (Math.PI / 2.0)));
 	}
 	
-	protected int getNumberOfBranches(int branches) {
+	protected int getTotalNumberOfBranches(int branchExtensionsOnSingleBranch) {
 		int sum = 0;
 		
 		for (int i = 0; i < this.depth; ++i) {
-			sum += Math.pow(branches, i);
+			sum += Math.pow(branchExtensionsOnSingleBranch, i);
 		}	
 		
 		return sum;

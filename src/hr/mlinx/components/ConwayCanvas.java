@@ -119,7 +119,7 @@ public class ConwayCanvas extends Canvas {
 		
 		if (!changed) {
 			++noChanges;
-			if (noChanges >= fps * 3) { // new array if unchanged for FPS * 3 frames
+			if (noChanges >= fps * 3) { // new preset if unchanged for FPS * 3 frames
 				badStopwatch = lifeTime * fps;
 				noChanges = 0;
 			}

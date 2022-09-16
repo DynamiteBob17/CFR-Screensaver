@@ -155,7 +155,7 @@ public class Loader {
 		
 		for (int i = 0; i < horizLen; ++i) {
 			for (int j = 0; j < vertLen; ++j) {
-				array[i][j] = Util.R.nextInt(2) == 1 ? true : false;
+				array[i][j] = Util.R.nextBoolean();
 			}
 		}
 		

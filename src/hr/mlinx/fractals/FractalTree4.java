@@ -36,7 +36,7 @@ public class FractalTree4 extends FractalTree {
 		outerRightPhi = Util.R.nextDouble(360);
 		
 		cycleStart = 0;
-		numOfBranches = getNumberOfBranches(4);
+		numOfBranches = getTotalNumberOfBranches(4);
 		
 		trunkStart = new Point(Util.RES.getWidth() / 2,
 				   Util.RES.getHeight() - 100 * Util.SCALE - 165 * Util.SCALE);

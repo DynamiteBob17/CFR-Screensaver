@@ -50,7 +50,7 @@ public class FractalTree3 extends FractalTree {
 			rightSpeed = Util.R.nextDouble(MIN_SPEED, MAX_SPEED);
 		}
 		
-		numOfBranches = getNumberOfBranches(3);
+		numOfBranches = getTotalNumberOfBranches(3);
 		
 		trunkStart = new Point(Util.RES.getWidth() / 2,
 							   Util.RES.getHeight() - 100 * Util.SCALE);

@@ -53,7 +53,7 @@ public class FractalTree2 extends FractalTree {
 		
 		max = 1;
 		lvl = 0;
-		numOfBranches = getNumberOfBranches(2);
+		numOfBranches = getTotalNumberOfBranches(2);
 		
 		trunkStart = new Point(Util.RES.getWidth() / 2,
 							   Util.RES.getHeight() - 100 * Util.SCALE);
