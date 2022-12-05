@@ -15,7 +15,7 @@ public class FractalCanvas extends Canvas {
 	private static final long serialVersionUID = 3656970158683044949L;
 	
 	private static final int PRESET_TIME = 60;
-	private static final int FPS = 60;
+	private static final int FPS = 45;
 	private static final int TIMER_DELAY = (int) ((1.0 / FPS) * 1000);
 	
 	private FractalTree fractal;

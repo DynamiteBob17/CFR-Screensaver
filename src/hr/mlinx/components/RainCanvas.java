@@ -16,7 +16,7 @@ import hr.mlinx.util.Util;
 public class RainCanvas extends Canvas {
 	private static final long serialVersionUID = -2767749303429087516L;
 	
-	private static final int FPS = 60;
+	private static final int FPS = 45;
 	private static final int TIMER_DELAY = (int) ((1.0 / FPS) * 1000);
 	private static final int COLOR_CHANGE = (int) (5 * Util.SCALE);
 	

@@ -1,8 +1,11 @@
 package hr.mlinx.components;
 
 import java.awt.Cursor;
+import java.awt.GraphicsDevice;
 import java.awt.Point;
 import java.awt.Toolkit;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
@@ -23,8 +26,6 @@ private static final long serialVersionUID = 4494172472747131232L;
 		super();
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setUndecorated(true);
-		setResizable(false);
 		
 		addListeners();
 		
@@ -45,8 +46,7 @@ private static final long serialVersionUID = 4494172472747131232L;
 		}
 		add(canvas);
 		
-		setExtendedState(JFrame.MAXIMIZED_BOTH);
-		setVisible(true);
+		setFullScreen();
 		
 		BufferedImage cursorImg = new BufferedImage(16, 16, 
 									  BufferedImage.TYPE_INT_ARGB);
@@ -59,6 +59,36 @@ private static final long serialVersionUID = 4494172472747131232L;
 		SwingUtilities.invokeLater(() ->{
 			new Main();
 		});
+	}
+	
+	private void setFullScreen() {
+		GraphicsDevice device = getGraphicsConfiguration().getDevice();
+		boolean isSupported = device.isFullScreenSupported();
+		
+		if (isSupported) {
+			setUndecorated(true);
+			setResizable(true);
+			
+			addFocusListener(new FocusListener() {
+				@Override
+				public void focusGained(FocusEvent e) {
+					setAlwaysOnTop(true);
+				}
+
+				@Override
+				public void focusLost(FocusEvent e) {
+					setAlwaysOnTop(false);
+				}
+			});
+			
+			device.setFullScreenWindow(this);
+		} else {
+			setUndecorated(true);
+			setResizable(false);
+			
+			setExtendedState(JFrame.MAXIMIZED_BOTH);
+			setVisible(true);
+		}
 	}
 	
 	private void addListeners() {
