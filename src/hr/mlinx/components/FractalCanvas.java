@@ -44,6 +44,7 @@ public class FractalCanvas extends Canvas {
 		}
 		
 		fractal.draw((Graphics2D) g);
+		if (isUnix) tk.sync();
 		fractal.move();
 	}
 	

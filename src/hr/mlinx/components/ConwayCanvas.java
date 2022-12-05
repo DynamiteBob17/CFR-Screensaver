@@ -75,6 +75,7 @@ public class ConwayCanvas extends Canvas {
 		}
 		
 		draw((Graphics2D) g);
+		if (isUnix) tk.sync();
 	}
 	
 	private void draw(Graphics2D g2) {

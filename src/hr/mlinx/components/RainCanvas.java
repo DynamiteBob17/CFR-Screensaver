@@ -45,6 +45,7 @@ public class RainCanvas extends Canvas {
 		colorIdx += COLOR_CHANGE;
 		
 		draw((Graphics2D) g);
+		if (isUnix) tk.sync();
 	}
 	
 	private void addToRain() {

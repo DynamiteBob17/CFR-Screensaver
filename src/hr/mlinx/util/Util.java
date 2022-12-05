@@ -10,4 +10,8 @@ public class Util {
 	public static final double SCALE = RES.getWidth() / 1920.0;
 	public static final Random R = new Random();
 	
+	public static boolean isUnix() {
+		return System.getProperty("os.name").startsWith("Linux");
+	}
+	
 }

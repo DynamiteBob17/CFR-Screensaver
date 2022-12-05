@@ -56,6 +56,10 @@ private static final long serialVersionUID = 4494172472747131232L;
 	}
 
 	public static void main(String[] args) {
+		if (Util.isUnix()) {
+			System.setProperty("sun.java2d.opengl", "true");
+		}
+		
 		SwingUtilities.invokeLater(() ->{
 			new Main();
 		});

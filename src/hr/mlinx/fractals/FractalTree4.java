@@ -49,7 +49,7 @@ public class FractalTree4 extends FractalTree {
 		g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, 
 							RenderingHints.VALUE_ANTIALIAS_ON);
 		
-		cycle = cycleStart += 120;
+		cycle = cycleStart += 30;
 		
 		tree4(trunkStart, trunkEnd, BASE_LENGTH, 0, BASE_STROKE, 1, g2);
 	}
@@ -95,7 +95,7 @@ public class FractalTree4 extends FractalTree {
 
 	@Override
 	public void setDepth() {
-		this.depth = 8;
+		this.depth = 7;
 	}
 
 }

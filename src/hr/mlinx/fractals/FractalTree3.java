@@ -109,7 +109,7 @@ public class FractalTree3 extends FractalTree {
 
 	@Override
 	public void setDepth() {
-		this.depth = 10;
+		this.depth = 8;
 	}
 	
 }
